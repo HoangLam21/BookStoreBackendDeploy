@@ -18,7 +18,7 @@ import java.util.Set;
 public class Order extends  Auditable{
     @Id
     @Column(name = "order_id")
-    @GeneratedValue(strategy =  GenerationType.AUTO)
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     int id;
     @Column(name = "customer_id")
     int customerId;

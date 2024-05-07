@@ -15,7 +15,7 @@ import lombok.experimental.FieldDefaults;
 public class Message extends Auditable{
     @Id
     @Column(name = "message_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String message_content;
     int message_status;
