@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.context.annotation.Configuration;
+/*
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
@@ -17,13 +18,11 @@ import org.springframework.context.annotation.Configuration;
                 description = "OpenAPI document for Bookstore",
                 title = "OpenAPI for BookStore",
                 version = "1.0.0",
-                license = @License(
-                        name = "License name",
-                        url = "null"
-                ),
                 termsOfService = "Terms of service"
         )
 )
+
+ */
 @SecurityScheme(
         name = "bearerAuth",
         description = "JWT auth description",
