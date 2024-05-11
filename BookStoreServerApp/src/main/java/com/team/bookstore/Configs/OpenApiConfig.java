@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.context.annotation.Configuration;
-/*
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
@@ -19,10 +18,11 @@ import org.springframework.context.annotation.Configuration;
                 title = "OpenAPI for BookStore",
                 version = "1.0.0",
                 termsOfService = "Terms of service"
+        ),
+        servers = @Server(
+                url = "https://content-spontaneity-prod.up.railway.app/BookStore"
         )
 )
-
- */
 @SecurityScheme(
         name = "bearerAuth",
         description = "JWT auth description",
