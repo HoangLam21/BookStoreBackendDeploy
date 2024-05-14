@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.servers.Server;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 @OpenAPIDefinition(
         info = @Info(
@@ -20,7 +21,7 @@ import org.springframework.context.annotation.Configuration;
                 termsOfService = "Terms of service"
         ),
         servers = @Server(
-                url = "http://content-spontaneity-prod.up.railway.app/"
+            url = "http://content-spontaneity-prod.up.railway.app/BookStore"
         )
 )
 @SecurityScheme(
@@ -32,4 +33,5 @@ import org.springframework.context.annotation.Configuration;
         in = SecuritySchemeIn.HEADER
 )
 public class OpenApiConfig {
+
 }
