@@ -19,9 +19,6 @@ import org.springframework.context.annotation.Configuration;
                 title = "OpenAPI for BookStore",
                 version = "1.0.0",
                 termsOfService = "Terms of service"
-        ),
-        servers = @Server(
-            url = "http://content-spontaneity-prod.up.railway.app/BookStore"
         )
 )
 @SecurityScheme(
