@@ -2,11 +2,6 @@ server:
   servlet:
     context-path: /BookStore
   port: 8010
-  ssl:
-    key-store: classpath:keystore.p12
-    key-store-password: 21062004
-    key-store-type: PKCS12
-    key-alias: tomcat
 spring:
   jpa:
     properties:
