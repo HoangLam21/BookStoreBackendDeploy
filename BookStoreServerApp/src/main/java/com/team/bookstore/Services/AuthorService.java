@@ -27,9 +27,14 @@ public class AuthorService {
     AuthorMapper authorMapper;
     @Secured("ROLE_ADMIN")
     public AuthorResponse createAuthor(AuthorRequest authorRequest){
-        Author savedAuthor =
-                authorRepository.save(authorMapper.toAuthor(authorRequest));
-        return authorMapper.toAuthorResponse(savedAuthor);
+        try {
+            Author savedAuthor =
+                    authorRepository.save(authorMapper.toAuthor(authorRequest));
+            return authorMapper.toAuthorResponse(savedAuthor);
+        }catch (Exception e){
+            log.info(e);
+            throw new ApplicationException(ErrorCodes.CANNOT_CREATE);
+        }
     }
     @Secured("ROLE_ADMIN")
     public AuthorResponse updateAuthor(int id, Author author){

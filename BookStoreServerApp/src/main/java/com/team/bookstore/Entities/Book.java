@@ -44,7 +44,7 @@ public class Book extends Auditable{
     @OneToMany(mappedBy = "book")
     @JsonIgnore
     Set<Import_Detail> import_detail = new HashSet<>();
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book",cascade = CascadeType.REMOVE)
     @JsonIgnore
     Set<Order_Detail> order_detail = new HashSet<>();
     @OneToMany(mappedBy = "book")
